@@ -4,13 +4,13 @@ class InputTextForm extends StatelessWidget {
   const InputTextForm({
     required this.controller,
     required this.labelText,
-    this.isObscure,
+    this.isObscure = false,
     super.key,
   });
 
   final TextEditingController controller;
   final String labelText;
-  final bool? isObscure;
+  final bool isObscure;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class InputTextForm extends StatelessWidget {
         labelText: labelText,
         border: const OutlineInputBorder(),
       ),
-      obscureText: isObscure ?? false,
+      obscureText: isObscure,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Este campo es obligatorio';
