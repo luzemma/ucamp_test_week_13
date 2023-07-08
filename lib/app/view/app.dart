@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_week_13/counter/counter.dart';
 import 'package:test_week_13/l10n/l10n.dart';
+import 'package:test_week_13/login/login_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: LoginPage(),
     );
   }
 }
